@@ -8,10 +8,10 @@ from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 
 
-X = (np.load('data.npy')).tolist()
+X = (np.load('cached_data/data.npy')).tolist()
 print('X downloaded')
 
-y = (np.load('data_y.npy')).tolist()
+y = (np.load('cached_data/data_y.npy')).tolist()
 out_encoder = LabelEncoder()
 out_encoder.fit(y)
 y = out_encoder.transform(y)
